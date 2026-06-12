@@ -1,0 +1,126 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "latest-reviews",
+      "what-i-test",
+      "faq",
+      "disclaimer"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Fable-5.org",
+        "highlight_text": "Fable 5 Reviews",
+        "description": "Hands-on reviews of Anthropic's Fable 5 by a Claude Pro user.<br/>Personal observations, not official endorsements.",
+        "show_hero_input": false,
+        "announcement": {
+          "badge": "Day 1",
+          "title": "Fable 5 access email sat for 3 days — here's what happened when I opened it",
+          "url": "/blog/fable5-day-1-pro-user"
+        },
+        "show_avatars": false,
+        "show_award": false
+      },
+      "latest-reviews": {
+        "id": "latest-reviews",
+        "block": "features",
+        "title": "Latest Reviews",
+        "description": "Every post is the result of an actual real-world task. No predictions — only observations after the run.",
+        "items": [
+          {
+            "title": "Fable 5 access email sat for 3 days — here's what happened",
+            "description": "Day 1 as a Pro user: from terminal errors to Co-Work mode running a 5-hour task non-stop.",
+            "icon": "Clock"
+          },
+          {
+            "title": "Fable 5 vs Opus 4.8: 7 real tasks compared",
+            "description": "Ran the same skill / SOP on both models. Here's what actually changed.",
+            "icon": "Compare"
+          },
+          {
+            "title": "Can Fable 5's Co-Work mode handle long tasks?",
+            "description": "50-step SOP test: progress, context retention, and break recovery.",
+            "icon": "Layers"
+          }
+        ]
+      },
+      "what-i-test": {
+        "id": "what-i-test",
+        "block": "features",
+        "title": "What I test",
+        "description": "As a Pro user, my concerns with Fable 5 are different from official docs. I care about:",
+        "items": [
+          {
+            "title": "How big a project fits in 5 hours",
+            "description": "Pro users have a daily window. I'll publish task duration, token consumption, and break locations for every test.",
+            "icon": "Hourglass"
+          },
+          {
+            "title": "Co-Work mode vs terminal API",
+            "description": "Same task, two invocation paths. Differences in stability, speed, and context retention.",
+            "icon": "GitCompare"
+          },
+          {
+            "title": "Can existing skills / SOPs be reused?",
+            "description": "I have a 50-step SOP that ran on Opus 4.8. Does Fable 5 pick it up directly? What changes?",
+            "icon": "PackageOpen"
+          },
+          {
+            "title": "Does Fable 5 get lazy or dumb on long tasks?",
+            "description": "Comparing the second half vs first half of a 5-hour run. This is what Pro users care about most.",
+            "icon": "Brain"
+          },
+          {
+            "title": "Hidden Pro plan capabilities",
+            "description": "The email said 'Available through June 22, 2026'. I'll test every Pro-plan trick before that cutoff.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "When Fable 5 is worse than Opus 4.8",
+            "description": "Not every scenario is an upgrade. Real counter-examples where Fable 5 falls behind.",
+            "icon": "AlertCircle"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "className": "bg-black text-white dark",
+        "label": "FAQ",
+        "title": "Frequently Asked Questions",
+        "description": "Quick answers about this site, Fable 5, and Claude Pro.",
+        "items": [
+          {
+            "title": "Is fable-5.org an official Anthropic site?",
+            "description": "No. fable-5.org is an independent third-party site. All reviews are personal, hands-on tests — not endorsements. This site has no official relationship, partnership, or affiliate status with Anthropic."
+          },
+          {
+            "title": "Which Fable 5 version are you testing?",
+            "description": "Anthropic's Fable 5 model released June 10, 2026. The specific patch number is not public — the access email simply says 'Fable 5'."
+          },
+          {
+            "title": "Why Pro user specifically?",
+            "description": "Before Fable 5, Pro accounts had no access to top-tier models for long tasks. This is the biggest change for Pro users — and the one the community is watching most closely."
+          },
+          {
+            "title": "Are your review data trustworthy?",
+            "description": "Every review is a record of my real task. I'll publish: task description, input prompt, Fable 5 output, break location, token consumption. If you spot fabrication, report it."
+          },
+          {
+            "title": "Why this domain?",
+            "description": "fable-5.org happened to be unregistered, so I registered it. The domain itself isn't the point — content is. If Anthropic's trademark team has concerns, I'll rebrand."
+          },
+          {
+            "title": "Will you sell anything?",
+            "description": "No ads, no courses, no affiliate links on this site. If paid content ever happens, it'll be announced and clearly labeled."
+          }
+        ]
+      },
+      "disclaimer": {
+        "id": "disclaimer",
+        "title": "Independent Third-Party Notice",
+        "content": "fable-5.org is an independent third-party site. All content reflects one Claude Pro user's personal testing. This site has no official relationship, partnership, license, or affiliate arrangement with Anthropic PBC, its subsidiaries, or affiliates. 'Fable' and 'Anthropic' are trademarks of Anthropic PBC; this site uses those names only to identify the model being reviewed, not to imply any official relationship. Reviews are not investment advice, do not constitute an endorsement of Fable 5's capabilities, and should not be used as the sole basis for any purchase decision."
+      }
+    }
+  }
+}

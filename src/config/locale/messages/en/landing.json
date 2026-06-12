@@ -1,0 +1,96 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Fable-5.org",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Fable-5.org",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Reviews",
+          "url": "/docs",
+          "icon": "RiFileListLine"
+        },
+        {
+          "title": "About",
+          "url": "/docs/about",
+          "icon": "RiInformationLine"
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": false,
+      "show_credits": false,
+      "show_sign_out": false,
+      "items": []
+    },
+    "show_sign": false,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Fable-5.org",
+      "description": "Fable-5.org is an independent third-party review site tracking a Claude Pro user's real-world testing of Anthropic's Fable 5 model. Not affiliated with Anthropic. No official partnership or affiliate relationship. All reviews are personal, hands-on tests — not endorsements.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Fable-5.org"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2026 • fable-5.org • Independent third-party site. Not affiliated with Anthropic. No official partnership or affiliate relationship. Powered by community curiosity.",
+    "nav": {
+      "items": [
+        {
+          "title": "Reviews",
+          "children": [
+            {
+              "title": "All Reviews",
+              "url": "/docs",
+              "target": "_self"
+            },
+            {
+              "title": "About This Site",
+              "url": "/docs/about",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/zlc000190",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/zlc000190",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:zhanglongchao@local",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": []
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "title": "海螺 AI 视频生成器 - 图片生成视频",
+    "description": "海螺 AI 图片生成视频工具。上传任意图片，一句话 prompt，海螺 AI 把它变成电影感短视频。",
+    "keywords": "海螺 ai, 海螺 ai 视频, 海螺 ai 视频生成器, 海螺视频, 图生视频, AI 视频生成, hailuo2.video"
+  },
+  "sign": {
+    "sign_in_title": "登录",
+    "sign_in_description": "登录您的账户以开始创作",
+    "sign_up_title": "注册",
+    "sign_up_description": "创建一个新账户",
+    "email_title": "邮箱",
+    "email_placeholder": "请输入您的邮箱地址",
+    "password_title": "密码",
+    "password_placeholder": "请输入您的密码",
+    "forgot_password": "忘记密码？",
+    "or": "或",
+    "continue": "继续",
+    "no_account": "还没有账户？",
+    "already_have_account": "已有账户？",
+    "email_sign_in": "使用邮箱登录",
+    "google_sign_in_title": "使用 Google 登录",
+    "github_sign_in_title": "使用 GitHub 登录",
+    "close_title": "关闭",
+    "cancel_title": "取消",
+    "sign_out_title": "退出登录",
+    "user_center_title": "个人中心",
+    "billing_title": "订阅账单",
+    "name_title": "姓名",
+    "name_placeholder": "请输入您的姓名",
+    "email_verification_hint": "请输入可正常接收邮件的邮箱。注册后需要验证邮箱才能开始使用。",
+    "admin_title": "管理后台",
+    "credits_title": "剩余积分: {credits}",
+    "verify_email_sent": "验证邮件已发送，请查看您的收件箱。",
+    "verify_email_required": "请先完成邮箱验证后再登录。",
+    "resend_verification": "重新发送验证邮件",
+    "resend_verification_sent": "验证邮件已重新发送，请查收。",
+    "verify_email_page_title": "查收您的电子邮件",
+    "verify_email_page_description": "在继续之前，请点击发送到以下邮箱的链接：",
+    "verify_email_continue": "继续",
+    "verify_email_tip": "完成验证后，请点击“继续”。",
+    "verify_email_not_verified_yet": "尚未完成验证，请先点击邮件中的验证链接。",
+    "verify_email_account_mismatch": "当前已登录 {current}，本页面正在等待 {expected} 的验证结果。",
+    "resend_verification_countdown": "重新发送验证邮件 ({seconds}秒)",
+    "resend_verification_wait": "请等待 {seconds} 秒后再重新发送。",
+    "back_to_sign_in": "返回登录"
+  },
+  "nav": {
+    "home": "首页",
+    "pricing": "定价与充值"
+  },
+  "user": {
+    "my_orders": "我的订单",
+    "sign_in": "登录",
+    "sign_out": "退出登录",
+    "admin_system": "管理后台"
+  },
+  "my_orders": {
+    "title": "我的订单",
+    "description": "Hailuo AI 视频生成积分和订阅的订单记录。",
+    "no_orders": "暂无订单记录",
+    "tip": "",
+    "activate_order": "激活订单",
+    "actived": "已激活",
+    "join_discord": "加入 Discord",
+    "read_docs": "查看文档",
+    "table": {
+      "order_no": "订单号",
+      "email": "邮箱",
+      "product_name": "产品名称",
+      "amount": "金额",
+      "paid_at": "支付时间",
+      "github_username": "GitHub 用户名",
+      "status": "状态"
+    }
+  },
+  "my_credits": {
+    "title": "我的积分",
+    "left_tip": "剩余积分: {left_credits}",
+    "no_credits": "暂无积分记录",
+    "recharge": "购买积分",
+    "table": {
+      "trans_no": "流水号",
+      "trans_type": "交易类型",
+      "credits": "积分变动",
+      "updated_at": "时间",
+      "status": "状态"
+    }
+  },
+  "payment": {
+    "choose_payment_method": "选择支付方式",
+    "choose_payment_method_description": "请选择您偏好的支付方式进行充值",
+    "cancel_title": "取消"
+  },
+  "locale_detector": {
+    "title": "检测到您的浏览器语言为 {locale}，是否切换？",
+    "switch_to": "切换到 {locale}"
+  }
+}

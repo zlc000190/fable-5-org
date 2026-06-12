@@ -1,0 +1,328 @@
+{
+  "metadata": {
+    "title": "Pricing — Hailuo 2 Video by Hailuo AI",
+    "description": "Start with a plan — Hailuo 2 Video by Hailuo AI Hailuo video generation by Hailuo AI delivers cinematic results. Hailuo video generation by Hailuo AI delivers cinematic results. Powered by Hailuo AI for Hailuo 2 Video generation. Discover Hailuo 2 Video and hailuo video generation."
+  },
+  "page": {
+    "title": "Hailuo AI Pricing — Hailuo 2 Video by Hailuo AI",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "Subscribe to Create Videos Just as You Imagine — Hailuo 2 Video by Hailuo AI",
+        "description": "Choose the perfect plan for your video creation needs. All plans include access to our advanced AI video generation technology. Powered by Hailuo 2 Video by Hailuo AI.",
+        "groups": [
+          {
+            "name": "monthly",
+            "title": "Monthly"
+          },
+          {
+            "name": "yearly",
+            "title": "Yearly"
+          }
+        ],
+        "items": [
+          {
+            "title": "Lite",
+            "description": "For beginners exploring AI video creation and casual content makers",
+            "group": "monthly",
+            "feature": [
+              {
+                "title": "CREDITS",
+                "list": [
+                  "200 Credits /mo (≈ 40 videos)",
+                  "Buy More Credit Packs as Needed"
+                ]
+              },
+              {
+                "title": "FEATURES",
+                "list": [
+                  "Cross-Video Character Consistency",
+                  "Top-Quality Video Models",
+                  "Image & Text-to-Video",
+                  "Fast Generation Mode"
+                ]
+              },
+              {
+                "title": "BENEFITS",
+                "list": [
+                  "Private Creation",
+                  "No Watermarks",
+                  "Full Commercial Use"
+                ]
+              }
+            ],
+            "interval": "month",
+            "amount": 1400,
+            "currency": "USD",
+            "price": "$14",
+            "unit": "USD/mo",
+            "is_featured": false,
+            "tip": "$14 USD billed monthly",
+            "button": {
+              "title": "Buy Hailuo AI Now",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "lite_monthly",
+            "product_name": "Hailuo AI Lite Plan (Monthly)",
+            "credits": 200,
+            "valid_days": 30,
+            "plan_name": "Lite"
+          },
+          {
+            "title": "Pro",
+            "description": "For creators needing higher quality output and increased production capacity",
+            "label": "Popular",
+            "group": "monthly",
+            "feature": [
+              {
+                "title": "CREDITS",
+                "list": [
+                  "600 Credits /mo (≈ 120 videos)",
+                  "Buy More Credit Packs as Needed"
+                ]
+              },
+              {
+                "title": "FEATURES",
+                "list": [
+                  "Cross-Video Character Consistency",
+                  "Top-Quality Video Models",
+                  "Image & Text-to-Video",
+                  "Fast Generation Mode"
+                ]
+              },
+              {
+                "title": "BENEFITS",
+                "list": [
+                  "Private Creation",
+                  "No Watermarks",
+                  "Full Commercial Use"
+                ]
+              }
+            ],
+            "interval": "month",
+            "amount": 3500,
+            "currency": "USD",
+            "price": "$35",
+            "unit": "USD/mo",
+            "is_featured": true,
+            "tip": "$35 USD billed monthly",
+            "button": {
+              "title": "Buy Hailuo AI Now",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "pro_monthly",
+            "product_name": "Hailuo AI Pro Plan (Monthly)",
+            "credits": 600,
+            "valid_days": 30,
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Premium",
+            "description": "For high-volume professional users requiring maximum efficiency and value",
+            "group": "monthly",
+            "feature": [
+              {
+                "title": "CREDITS",
+                "list": [
+                  "3000 Credits /mo (≈ 600 videos)",
+                  "Buy More Credit Packs as Needed"
+                ]
+              },
+              {
+                "title": "FEATURES",
+                "list": [
+                  "Cross-Video Character Consistency",
+                  "Top-Quality Video Models",
+                  "Image & Text-to-Video",
+                  "Fast Generation Mode"
+                ]
+              },
+              {
+                "title": "BENEFITS",
+                "list": [
+                  "Private Creation",
+                  "No Watermarks",
+                  "Full Commercial Use",
+                  "Priority Support"
+                ]
+              }
+            ],
+            "interval": "month",
+            "amount": 15900,
+            "currency": "USD",
+            "price": "$159",
+            "unit": "USD/mo",
+            "is_featured": false,
+            "tip": "$159 USD billed monthly",
+            "button": {
+              "title": "Buy Hailuo AI Now",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium_monthly",
+            "product_name": "Hailuo AI Premium Plan (Monthly)",
+            "credits": 3000,
+            "valid_days": 30,
+            "plan_name": "Premium"
+          },
+          {
+            "title": "Lite",
+            "description": "For beginners exploring AI video creation and casual content makers",
+            "group": "yearly",
+            "feature": [
+              {
+                "title": "CREDITS",
+                "list": [
+                  "200 Credits /mo (≈ 40 videos)",
+                  "Buy More Credit Packs as Needed"
+                ]
+              },
+              {
+                "title": "FEATURES",
+                "list": [
+                  "Cross-Video Character Consistency",
+                  "Top-Quality Video Models",
+                  "Image & Text-to-Video",
+                  "Fast Generation Mode"
+                ]
+              },
+              {
+                "title": "BENEFITS",
+                "list": [
+                  "Private Creation",
+                  "No Watermarks",
+                  "Full Commercial Use"
+                ]
+              }
+            ],
+            "interval": "year",
+            "amount": 12000,
+            "currency": "USD",
+            "price": "$10",
+            "original_price": "$14",
+            "unit": "USD/mo",
+            "is_featured": false,
+            "tip": "$120 USD billed yearly",
+            "button": {
+              "title": "Buy Hailuo AI Now",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "lite_yearly",
+            "product_name": "Hailuo AI Lite Plan (Yearly)",
+            "credits": 2400,
+            "valid_days": 365,
+            "plan_name": "Lite"
+          },
+          {
+            "title": "Pro",
+            "description": "For creators needing higher quality output and increased production capacity",
+            "label": "Best Value",
+            "group": "yearly",
+            "feature": [
+              {
+                "title": "CREDITS",
+                "list": [
+                  "600 Credits /mo (≈ 120 videos)",
+                  "Buy More Credit Packs as Needed"
+                ]
+              },
+              {
+                "title": "FEATURES",
+                "list": [
+                  "Cross-Video Character Consistency",
+                  "Top-Quality Video Models",
+                  "Image & Text-to-Video",
+                  "Fast Generation Mode"
+                ]
+              },
+              {
+                "title": "BENEFITS",
+                "list": [
+                  "Private Creation",
+                  "No Watermarks",
+                  "Full Commercial Use"
+                ]
+              }
+            ],
+            "interval": "year",
+            "amount": 30000,
+            "currency": "USD",
+            "price": "$25",
+            "original_price": "$35",
+            "unit": "USD/mo",
+            "is_featured": true,
+            "tip": "$300 USD billed yearly",
+            "button": {
+              "title": "Buy Hailuo AI Now",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "pro_yearly",
+            "product_name": "Hailuo AI Pro Plan (Yearly)",
+            "credits": 7200,
+            "valid_days": 365,
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Premium",
+            "description": "For high-volume professional users requiring maximum efficiency and value",
+            "label": "Best Value",
+            "group": "yearly",
+            "feature": [
+              {
+                "title": "CREDITS",
+                "list": [
+                  "3000 Credits /mo (≈ 600 videos)",
+                  "Buy More Credit Packs as Needed"
+                ]
+              },
+              {
+                "title": "FEATURES",
+                "list": [
+                  "Cross-Video Character Consistency",
+                  "Top-Quality Video Models",
+                  "Image & Text-to-Video",
+                  "Fast Generation Mode"
+                ]
+              },
+              {
+                "title": "BENEFITS",
+                "list": [
+                  "Private Creation",
+                  "No Watermarks",
+                  "Full Commercial Use",
+                  "Priority Support"
+                ]
+              }
+            ],
+            "interval": "year",
+            "amount": 142800,
+            "currency": "USD",
+            "price": "$119",
+            "original_price": "$159",
+            "unit": "USD/mo",
+            "is_featured": false,
+            "tip": "$1,428 USD billed yearly",
+            "button": {
+              "title": "Buy Hailuo AI Now",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium_yearly",
+            "product_name": "Hailuo AI Premium Plan (Yearly)",
+            "credits": 36000,
+            "valid_days": 365,
+            "plan_name": "Premium"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "Current Plan",
+    "processing": "Processing"
+  }
+}

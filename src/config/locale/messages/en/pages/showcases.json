@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "Showcases",
+    "description": "Awesome projects built with hailuo2"
+  },
+  "page": {
+    "title": "Showcases",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "AI SaaS Startups built with hailuo2",
+        "description": "Easy to use and fast to ship.",
+        "groups": [
+          {
+            "name": "all",
+            "title": "All"
+          },
+          {
+            "name": "ai-chatbot",
+            "title": "AI Chatbot"
+          },
+          {
+            "name": "ai-image",
+            "title": "AI Image"
+          },
+          {
+            "name": "ai-video",
+            "title": "AI Video"
+          },
+          {
+            "name": "ai-audio",
+            "title": "AI Audio"
+          },
+          {
+            "name": "ai-music",
+            "title": "AI Music"
+          },
+          {
+            "name": "ai-coding",
+            "title": "AI Coding"
+          },
+          {
+            "name": "other",
+            "title": "Other"
+          }
+        ],
+        "items": []
+      }
+    }
+  }
+}

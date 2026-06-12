@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "title": "方案与定价",
+    "description": "选择最适合您的 Hailuo AI 订阅方案，立即开始创作电影级视频。"
+  },
+  "page": {
+    "title": "Hailuo AI 定价方案",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "量身定制的创作方案，开启无限可能",
+        "description": "无论是个体创作还是专业产出，我们都有适合您的方案。所有级别均支持最先进的模型接入。",
+        "groups": [
+          {
+            "name": "monthly",
+            "title": "月付方案"
+          },
+          {
+            "name": "yearly",
+            "title": "年付方案 (更优惠)"
+          }
+        ],
+        "items": [
+          {
+            "title": "Lite 基础版",
+            "description": "适合初尝 AI 创作的个人及轻量制作者",
+            "group": "monthly",
+            "feature": [
+              {
+                "title": "积分额度",
+                "list": [
+                  "200 积分 /月 (相当于约 40 个视频)",
+                  "支持按需购买额外积分包"
+                ]
+              },
+              {
+                "title": "核心功能",
+                "list": [
+                  "跨镜头角色一致性",
+                  "接入全球顶级视频模型",
+                  "支持图文双重生成",
+                  "极速创作模式"
+                ]
+              },
+              {
+                "title": "专属权益",
+                "list": [
+                  "创作内容私密化",
+                  "生成视频无水印",
+                  "支持商业用途"
+                ]
+              }
+            ],
+            "interval": "month",
+            "amount": 1400,
+            "currency": "USD",
+            "price": "$14",
+            "currencies": [
+              {
+                "currency": "CNY",
+                "amount": 9900,
+                "price": "¥99",
+                "payment_providers": ["stripe"]
+              }
+            ],
+            "unit": "USD/月",
+            "is_featured": false,
+            "tip": "$14 USD 按月计费",
+            "button": {
+              "title": "立即开启创作",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "lite_monthly",
+            "product_name": "Hailuo AI Lite 方案 (月付)",
+            "credits": 200,
+            "valid_days": 30,
+            "plan_name": "Lite"
+          },
+          {
+            "title": "Pro 专业版",
+            "description": "适合追求高质量产出与高效率的职业创作者",
+            "label": "热门推荐",
+            "group": "monthly",
+            "feature": [
+              {
+                "title": "积分额度",
+                "list": [
+                  "600 积分 /月 (相当于约 120 个视频)",
+                  "支持按需购买额外积分包"
+                ]
+              },
+              {
+                "title": "核心功能",
+                "list": [
+                  "跨镜头角色一致性",
+                  "接入全球顶级视频模型",
+                  "支持图文双重生成",
+                  "极速创作模式"
+                ]
+              },
+              {
+                "title": "专属权益",
+                "list": [
+                  "创作内容私密化",
+                  "生成视频无水印",
+                  "支持商业用途"
+                ]
+              }
+            ],
+            "interval": "month",
+            "amount": 3500,
+            "currency": "USD",
+            "price": "$35",
+            "currencies": [
+              {
+                "currency": "CNY",
+                "amount": 24900,
+                "price": "¥249",
+                "payment_providers": ["stripe"]
+              }
+            ],
+            "unit": "USD/月",
+            "is_featured": true,
+            "tip": "$35 USD 按月计费",
+            "button": {
+              "title": "立即开启创作",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "pro_monthly",
+            "product_name": "Hailuo AI Pro 方案 (月付)",
+            "credits": 600,
+            "valid_days": 30,
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Premium 尊享版",
+            "description": "为需要极致效率与超高产能的专业型玩家定制",
+            "group": "monthly",
+            "feature": [
+              {
+                "title": "积分额度",
+                "list": [
+                  "3000 积分 /月 (相当于约 600 个视频)",
+                  "支持按需购买额外积分包"
+                ]
+              },
+              {
+                "title": "核心功能",
+                "list": [
+                  "跨镜头角色一致性",
+                  "接入全球顶级视频模型",
+                  "支持图文双重生成",
+                  "极速创作模式"
+                ]
+              },
+              {
+                "title": "专属权益",
+                "list": [
+                  "创作内容私密化",
+                  "生成视频无水印",
+                  "支持商业用途",
+                  "优先技术支持"
+                ]
+              }
+            ],
+            "interval": "month",
+            "amount": 15900,
+            "currency": "USD",
+            "price": "$159",
+            "currencies": [
+              {
+                "currency": "CNY",
+                "amount": 114900,
+                "price": "¥1149",
+                "payment_providers": ["stripe"]
+              }
+            ],
+            "unit": "USD/月",
+            "is_featured": false,
+            "tip": "$159 USD 按月计费",
+            "button": {
+              "title": "立即开启创作",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium_monthly",
+            "product_name": "Hailuo AI Premium 方案 (月付)",
+            "credits": 3000,
+            "valid_days": 30,
+            "plan_name": "Premium"
+          },
+          {
+            "title": "Lite 基础版",
+            "description": "适合初尝 AI 创作的个人及轻量制作者",
+            "group": "yearly",
+            "feature": [
+              {
+                "title": "积分额度",
+                "list": [
+                  "200 积分 /月 (相当于约 40 个视频)",
+                  "支持按需购买额外积分包"
+                ]
+              },
+              {
+                "title": "核心功能",
+                "list": [
+                  "跨镜头角色一致性",
+                  "接入全球顶级视频模型",
+                  "支持图文双重生成",
+                  "极速创作模式"
+                ]
+              },
+              {
+                "title": "专属权益",
+                "list": [
+                  "创作内容私密化",
+                  "生成视频无水印",
+                  "支持商业用途"
+                ]
+              }
+            ],
+            "interval": "year",
+            "amount": 12000,
+            "currency": "USD",
+            "price": "$10",
+            "original_price": "$14",
+            "unit": "USD/月",
+            "is_featured": false,
+            "tip": "$120 USD 按年计费",
+            "button": {
+              "title": "立即开启创作",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "lite_yearly",
+            "product_name": "Hailuo AI Lite 方案 (年付)",
+            "credits": 2400,
+            "valid_days": 365,
+            "plan_name": "Lite"
+          },
+          {
+            "title": "Pro 专业版",
+            "description": "适合追求高质量产出与高效率的职业创作者",
+            "label": "最佳性价比",
+            "group": "yearly",
+            "feature": [
+              {
+                "title": "积分额度",
+                "list": [
+                  "600 积分 /月 (相当于约 120 个视频)",
+                  "支持按需购买额外积分包"
+                ]
+              },
+              {
+                "title": "核心功能",
+                "list": [
+                  "跨镜头角色一致性",
+                  "接入全球顶级视频模型",
+                  "支持图文双重生成",
+                  "极速创作模式"
+                ]
+              },
+              {
+                "title": "专属权益",
+                "list": [
+                  "创作内容私密化",
+                  "生成视频无水印",
+                  "支持商业用途"
+                ]
+              }
+            ],
+            "interval": "year",
+            "amount": 30000,
+            "currency": "USD",
+            "price": "$25",
+            "original_price": "$35",
+            "unit": "USD/月",
+            "is_featured": true,
+            "tip": "$300 USD 按年计费",
+            "button": {
+              "title": "立即开启创作",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "pro_yearly",
+            "product_name": "Hailuo AI Pro 方案 (年付)",
+            "credits": 7200,
+            "valid_days": 365,
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Premium 尊享版",
+            "description": "为需要极致效率与超高产能的专业型玩家定制",
+            "label": "最佳性价比",
+            "group": "yearly",
+            "feature": [
+              {
+                "title": "积分额度",
+                "list": [
+                  "3000 积分 /月 (相当于约 600 个视频)",
+                  "支持按需购买额外积分包"
+                ]
+              },
+              {
+                "title": "核心功能",
+                "list": [
+                  "跨镜头角色一致性",
+                  "接入全球顶级视频模型",
+                  "支持图文双重生成",
+                  "极速创作模式"
+                ]
+              },
+              {
+                "title": "专属权益",
+                "list": [
+                  "创作内容私密化",
+                  "生成视频无水印",
+                  "支持商业用途",
+                  "优先技术支持"
+                ]
+              }
+            ],
+            "interval": "year",
+            "amount": 142800,
+            "currency": "USD",
+            "price": "$119",
+            "original_price": "$159",
+            "unit": "USD/月",
+            "is_featured": false,
+            "tip": "$1,428 USD 按年计费",
+            "button": {
+              "title": "立即开启创作",
+              "url": "/auth/signin",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium_yearly",
+            "product_name": "Hailuo AI Premium 方案 (年付)",
+            "credits": 36000,
+            "valid_days": 365,
+            "plan_name": "Premium"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "当前正在使用",
+    "processing": "正在处理中..."
+  }
+}

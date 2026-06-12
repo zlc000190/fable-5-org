@@ -1,0 +1,126 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "latest-reviews",
+      "what-i-test",
+      "faq",
+      "disclaimer"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Fable-5.org",
+        "highlight_text": "Fable 5 实测日记",
+        "description": "一位 Claude Pro 用户对 Anthropic Fable 5 模型的真实实测记录。<br/>不是官方背书，是个人观察。",
+        "show_hero_input": false,
+        "announcement": {
+          "badge": "Day 1",
+          "title": "Fable 5 邮件躺了三天，今天才敢点开 —— Pro 用户实测第 1 天",
+          "url": "/blog/fable5-day-1-pro-user"
+        },
+        "show_avatars": false,
+        "show_award": false
+      },
+      "latest-reviews": {
+        "id": "latest-reviews",
+        "block": "features",
+        "title": "最新评测",
+        "description": "每一篇都是一次真实任务的结果。不写预测，只写跑完之后的观察。",
+        "items": [
+          {
+            "title": "Fable 5 邮件躺了三天，今天才敢点开",
+            "description": "Pro 用户实测第 1 天：从终端报错到 Co-Work 模式跑通，5 小时不间断的真实记录。",
+            "icon": "Clock"
+          },
+          {
+            "title": "Fable 5 vs Opus 4.8：跑通 7 个真实任务的差异",
+            "description": "用同一套 skill / SOP 在两个模型上各跑一遍，看看到底变了什么。",
+            "icon": "Compare"
+          },
+          {
+            "title": "Fable 5 的 Co-Work 模式能跑长任务吗？",
+            "description": "50 步 SOP 测试：进度条、上下文保持、断点恢复实测。",
+            "icon": "Layers"
+          }
+        ]
+      },
+      "what-i-test": {
+        "id": "what-i-test",
+        "block": "features",
+        "title": "我测什么",
+        "description": "作为 Pro 用户，我对 Fable 5 的关注点跟官方文档不一样。我关心的是：",
+        "items": [
+          {
+            "title": "5 小时额度能跑多大项目",
+            "description": "Pro 用户一天的实际可用窗口。我会公布每次任务的时长、token 消耗、和断点位置。",
+            "icon": "Hourglass"
+          },
+          {
+            "title": "Co-Work 模式 vs 终端 API",
+            "description": "同一个任务在两种调用方式下的稳定性、速度、和上下文保持差异。",
+            "icon": "GitCompare"
+          },
+          {
+            "title": "现有 skill / SOP 是否能复用",
+            "description": "我之前在 Opus 4.8 上跑过的一套 50 步 SOP，Fable 5 能不能直接套？哪些地方要改？",
+            "icon": "PackageOpen"
+          },
+          {
+            "title": "长任务会不会偷懒、变笨",
+            "description": "跑 5 小时后半段 vs 前半段，质量有没有变化。这是 Pro 用户最关心的。",
+            "icon": "Brain"
+          },
+          {
+            "title": "Pro 套餐的隐藏能力",
+            "description": "邮件里写 'Available through June 22, 2026'。我会在那之前把所有 Pro 用户能玩的花样测一遍。",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "什么时候 Fable 5 不如 Opus 4.8",
+            "description": "不是所有场景都升级。我会写 Fable 5 表现不如旧模型的真实反例。",
+            "icon": "AlertCircle"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "className": "bg-black text-white dark",
+        "label": "FAQ",
+        "title": "常见问题",
+        "description": "关于本站、Fable 5 和 Claude Pro 的快速解答。",
+        "items": [
+          {
+            "title": "fable-5.org 是 Anthropic 官方吗？",
+            "description": "不是。fable-5.org 是独立第三方站点，所有评测内容均为个人实测，不构成任何官方背书。本站与 Anthropic 无任何官方关联、合作伙伴关系或 Affiliate 关系。"
+          },
+          {
+            "title": "你测的 Fable 5 是哪个版本？",
+            "description": "Anthropic 于 2026 年 6 月 10 日发布的 Fable 5 模型。具体小版本号 Anthropic 没有公开，邮件里只写 'Fable 5'。"
+          },
+          {
+            "title": "为什么是 Pro 用户？",
+            "description": "Fable 5 之前的所有顶级模型，Pro 账户要么用不到，要么只能跑轻量任务。这次 Anthropic 给 Pro 用户开通了长任务权限，这是 Pro 用户群里最关心的变化。"
+          },
+          {
+            "title": "评测数据可信吗？",
+            "description": "所有评测都是我自己的真实任务记录。我会公布：任务描述、输入 prompt、Fable 5 输出、断点位置、token 消耗。如有造假，欢迎举报。"
+          },
+          {
+            "title": "你的评测站为什么用这个域名？",
+            "description": "fable-5.org 这个域名恰好没注册，我就注册了。评测站跟域名本身没关系——重点是内容，不是域名。如果 Anthropic 商标团队有意见，我会改名。"
+          },
+          {
+            "title": "会卖东西吗？",
+            "description": "不会。本站不打广告、不卖课程、不接广告联盟。如果未来真要做付费内容，会在首页公告并明确标注。"
+          }
+        ]
+      },
+      "disclaimer": {
+        "id": "disclaimer",
+        "title": "独立第三方声明",
+        "content": "fable-5.org 是独立第三方站点，所有内容均为一位 Claude Pro 用户的个人实测记录。本站与 Anthropic PBC、Anthropic 子公司或关联公司无任何官方关联、合作伙伴关系、授权或 Affiliate 关系。'Fable' 与 'Anthropic' 是 Anthropic PBC 的商标，本网站使用该名称仅用于标识被评测的模型，不暗示任何官方关系。评测内容不构成投资建议、不构成对 Fable 5 模型的能力背书，亦不应作为购买决策的唯一依据。"
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Fable-5.org",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Fable-5.org",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "评测列表",
+          "url": "/docs",
+          "icon": "RiFileListLine"
+        },
+        {
+          "title": "关于",
+          "url": "/docs/about",
+          "icon": "RiInformationLine"
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": false,
+      "show_credits": false,
+      "show_sign_out": false,
+      "items": []
+    },
+    "show_sign": false,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Fable-5.org",
+      "description": "Fable-5.org 是独立第三方站点，记录一位 Claude Pro 用户对 Anthropic Fable 5 模型的实测过程与心得。本站与 Anthropic 无任何官方关联、合作伙伴关系或 Affiliate 关系。所有评测内容均为个人实测，不构成任何官方背书。",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Fable-5.org"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2026 • fable-5.org • Independent third-party site. Not affiliated with Anthropic. No official partnership or affiliate relationship. Powered by community curiosity.",
+    "nav": {
+      "items": [
+        {
+          "title": "评测",
+          "children": [
+            {
+              "title": "全部评测",
+              "url": "/docs",
+              "target": "_self"
+            },
+            {
+              "title": "关于本站",
+              "url": "/docs/about",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/zlc000190",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/zlc000190",
+          "target": "_blank"
+        },
+        {
+          "title": "联系邮箱",
+          "icon": "RiMailLine",
+          "url": "mailto:zhanglongchao@local",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": []
+    }
+  }
+}

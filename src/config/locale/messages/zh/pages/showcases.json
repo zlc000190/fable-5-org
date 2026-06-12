@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "案例展示",
+    "description": "用 Hailuo AI 创作的精彩项目"
+  },
+  "page": {
+    "title": "作品展示",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "基于 Hailuo AI 创作的最佳作品集",
+        "description": "简单、快速、高效。",
+        "groups": [
+          {
+            "name": "all",
+            "title": "所有项目"
+          },
+          {
+            "name": "ai-chatbot",
+            "title": "AI 聊天机器人"
+          },
+          {
+            "name": "ai-image",
+            "title": "AI 图片"
+          },
+          {
+            "name": "ai-video",
+            "title": "AI 视频"
+          },
+          {
+            "name": "ai-audio",
+            "title": "AI 音频"
+          },
+          {
+            "name": "ai-music",
+            "title": "AI 音乐"
+          },
+          {
+            "name": "ai-coding",
+            "title": "AI 编程"
+          },
+          {
+            "name": "other",
+            "title": "其他"
+          }
+        ],
+        "items": []
+      }
+    }
+  }
+}
