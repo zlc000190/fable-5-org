@@ -43,7 +43,17 @@ const nextConfig = {
         ],
       },
       {
-        // Allow OAuth popups to retain window.opener after cross-origin navigation
+        // HTML pages: keep CDN cache short so deploys propagate in ~1 min
+        // instead of waiting for the Next.js default s-maxage=3600.
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=60, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
         source: '/:path*',
         headers: [
           {
