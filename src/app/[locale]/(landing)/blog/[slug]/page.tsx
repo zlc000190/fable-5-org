@@ -16,10 +16,11 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const t = await getTranslations('pages.blog.metadata');
 
+  const base = (envConfigs.app_url || 'https://fable-5.org').replace(/\/$/, '');
   const canonicalUrl =
     locale !== envConfigs.locale
-      ? `${envConfigs.app_url}/${locale}/blog/${slug}`
-      : `${envConfigs.app_url}/blog/${slug}`;
+      ? `${base}/${locale}/blog/${slug}`
+      : `${base}/blog/${slug}`;
 
   const post = await getPost({ slug, locale });
   if (!post) {
@@ -28,15 +29,54 @@ export async function generateMetadata({
       description: t('description'),
       alternates: {
         canonical: canonicalUrl,
+        languages: {
+          en: `${base}/blog/${slug}`,
+          zh: `${base}/zh/blog/${slug}`,
+          'x-default': `${base}/blog/${slug}`,
+        },
       },
     };
   }
 
+  const otherLocaleUrl =
+    locale === 'en'
+      ? `${base}/zh/blog/${slug}`
+      : `${base}/blog/${slug}`;
+
   return {
-    title: `${post.title} | ${t('title')}`,
+    title: post.title,
     description: post.description,
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        en: `${base}/blog/${slug}`,
+        zh: `${base}/zh/blog/${slug}`,
+        'x-default': `${base}/blog/${slug}`,
+      },
+    },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.description,
+      url: canonicalUrl,
+      siteName: 'fable-5.org',
+      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
+      alternateLocale: locale === 'zh' ? ['en_US'] : ['zh_CN'],
+      images: [
+        {
+          url: '/og-default.png',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+          type: 'image/png',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: ['/og-default.png'],
     },
   };
 }
@@ -69,5 +109,56 @@ export default async function BlogDetailPage({
 
   const Page = await getThemePage('dynamic-page');
 
-  return <Page locale={locale} page={page} />;
+  // JSON-LD: Article schema for Google rich results.
+  const base = (envConfigs.app_url || 'https://fable-5.org').replace(/\/$/, '');
+  const articleUrl =
+    locale !== envConfigs.locale
+      ? `${base}/${locale}/blog/${slug}`
+      : `${base}/blog/${slug}`;
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    inLanguage: locale,
+    url: articleUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    image: {
+      '@type': 'ImageObject',
+      url: `${base}/og-default.png`,
+      width: 1200,
+      height: 630,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'fable-5.org',
+      url: base,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'fable-5.org',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${base}/og-default.png`,
+        width: 1200,
+        height: 630,
+      },
+    },
+    datePublished: post.created_at || new Date().toISOString(),
+    dateModified: post.created_at || new Date().toISOString(),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <Page locale={locale} page={page} />
+    </>
+  );
 }

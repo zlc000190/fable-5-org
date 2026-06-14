@@ -1,5 +1,6 @@
 import '@/config/style/global.css';
 
+import type { Metadata } from 'next';
 import { JetBrains_Mono, Merriweather, Plus_Jakarta_Sans } from 'next/font/google';
 import { getLocale, setRequestLocale } from 'next-intl/server';
 import NextTopLoader from 'nextjs-toploader';
@@ -34,6 +35,74 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
   preload: true,
 });
+
+// Root metadata: site-wide defaults for OG / Twitter / canonical / robots.
+// Per-page generateMetadata overrides override these.
+export const metadata: Metadata = {
+  metadataBase: new URL(envConfigs.app_url || 'https://fable-5.org'),
+  title: {
+    default: 'fable-5.org — Independent Pro User Reviews of Anthropic Fable 5',
+    template: '%s | fable-5.org',
+  },
+  description:
+    'An independent Pro-user perspective on Anthropic Fable 5: hands-on reviews, benchmark notes, and real-world use cases — published in English and Chinese.',
+  keywords: [
+    'Fable 5 review',
+    'Anthropic Fable 5',
+    'Fable 5 Pro',
+    'Claude review',
+    'LLM benchmark',
+    'AI model review',
+  ],
+  applicationName: 'fable-5.org',
+  authors: [{ name: 'fable-5.org', url: 'https://fable-5.org/about' }],
+  publisher: 'fable-5.org',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['zh_CN'],
+    siteName: 'fable-5.org',
+    title: 'fable-5.org — Independent Pro User Reviews of Anthropic Fable 5',
+    description:
+      'Hands-on reviews and benchmark notes of Anthropic Fable 5 from an independent Pro user. EN + 中文.',
+    url: envConfigs.app_url || 'https://fable-5.org',
+    images: [
+      {
+        url: '/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'fable-5.org — Independent Pro User Reviews',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'fable-5.org — Independent Pro User Reviews of Anthropic Fable 5',
+    description:
+      'Hands-on reviews and benchmark notes of Anthropic Fable 5. EN + 中文.',
+    images: ['/og-default.png'],
+  },
+  alternates: {
+    canonical: envConfigs.app_url || 'https://fable-5.org',
+    languages: {
+      en: envConfigs.app_url || 'https://fable-5.org',
+      zh: `${envConfigs.app_url || 'https://fable-5.org'}/zh`,
+      'x-default': envConfigs.app_url || 'https://fable-5.org',
+    },
+  },
+};
 
 export default async function RootLayout({
   children,
