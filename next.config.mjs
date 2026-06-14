@@ -31,6 +31,7 @@ const nextConfig = {
   async redirects() {
     return [];
   },
+  // Last build trigger: 2026-06-14 (force rebuild after stale CDN cache)
   async headers() {
     return [
       {
