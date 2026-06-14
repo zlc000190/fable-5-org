@@ -15,9 +15,9 @@
         "description": "Hands-on reviews of Anthropic's Fable 5 by a Claude Pro user.<br/>Personal observations, not official endorsements.",
         "show_hero_input": false,
         "announcement": {
-          "badge": "Day 1",
-          "title": "Fable 5 access email sat for 3 days — here's what happened when I opened it",
-          "url": "/blog/fable5-day-1-pro-user"
+          "badge": "Day 2",
+          "title": "Fable 5 Day 2: 9 hours without a break, but one overhyped feature",
+          "url": "/blog/fable5-day-2-benchmarks"
         },
         "show_avatars": false,
         "show_award": false
@@ -28,6 +28,11 @@
         "title": "Latest Reviews",
         "description": "Every post is the result of an actual real-world task. No predictions — only observations after the run.",
         "items": [
+          {
+            "title": "Fable 5 Day 2: 9 hours without a break, but one overhyped feature",
+            "description": "Pro user day 2: real numbers from a second long task + a near-miss context overflow + speed benchmarks vs Opus 4.8 and Sonnet 4.5.",
+            "icon": "Trophy"
+          },
           {
             "title": "Fable 5 access email sat for 3 days — here's what happened",
             "description": "Day 1 as a Pro user: from terminal errors to Co-Work mode running a 5-hour task non-stop.",

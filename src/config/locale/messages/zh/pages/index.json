@@ -15,9 +15,9 @@
         "description": "一位 Claude Pro 用户对 Anthropic Fable 5 模型的真实实测记录。<br/>不是官方背书，是个人观察。",
         "show_hero_input": false,
         "announcement": {
-          "badge": "Day 1",
-          "title": "Fable 5 邮件躺了三天，今天才敢点开 —— Pro 用户实测第 1 天",
-          "url": "/blog/fable5-day-1-pro-user"
+          "badge": "Day 2",
+          "title": "Fable 5 Day 2：跑了 9 小时没断，但发现一个被高估的功能",
+          "url": "/blog/fable5-day-2-benchmarks"
         },
         "show_avatars": false,
         "show_award": false
@@ -28,6 +28,11 @@
         "title": "最新评测",
         "description": "每一篇都是一次真实任务的结果。不写预测，只写跑完之后的观察。",
         "items": [
+          {
+            "title": "Fable 5 Day 2：跑了 9 小时没断，但发现一个被高估的功能",
+            "description": "Pro 用户实测第 2 天：9 小时跑通的真实数据 + context overflow 记录 + vs Opus 4.8 / Sonnet 4.5 速度对比。",
+            "icon": "Trophy"
+          },
           {
             "title": "Fable 5 邮件躺了三天，今天才敢点开",
             "description": "Pro 用户实测第 1 天：从终端报错到 Co-Work 模式跑通，5 小时不间断的真实记录。",

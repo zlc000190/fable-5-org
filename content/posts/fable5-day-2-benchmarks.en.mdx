@@ -1,0 +1,169 @@
+---
+title: "Fable 5 Day 2: 9 hours without a break, but one overhyped feature"
+description: "Pro user review day 2: real data from completing a second long task + a near-miss context overflow incident + an honest speed benchmark vs Opus 4.8 and Sonnet 4.5."
+date: 2026-06-13
+author: zlc000190
+category: Pro User Field Test
+tags:
+  - fable 5
+  - claude pro
+  - co-work mode
+  - long-horizon
+  - context overflow
+  - opus 4.8
+---
+
+# Fable 5 Day 2: 9 hours without a break, but one overhyped feature
+
+> **Disclaimer**: This is an independent third-party field test. The author is a Claude Pro user with no official affiliation with Anthropic. Nothing here constitutes official endorsement or financial advice.
+
+---
+
+When I closed Day 1 with "it really runs", Fable 5 was still going.
+
+Day 2 morning I woke up and went straight to Co-Work mode to check the progress bar.
+
+**It had finished.**
+
+Total runtime: 9 hours 14 minutes.
+
+I had hit 5 hours the previous night. This morning at 11:00 I started a second run; that one also finished cleanly by 13:00.
+
+Two back-to-back long runs. **Neither one dropped.**
+
+That wasn't possible with Opus 4.8. Past 3 hours on Opus 4.8 meant I had to babysit it, and I lost two sessions to disconnects that required manual reconnection.
+
+## Real numbers: 9-hour completion vs my expectations
+
+My task is a multi-stage skill pipeline: read files → modify code → run tests → fix → commit → start the next cycle.
+
+I'll spare the step count (it's my workflow), but the task has 7 stages. Fable 5 powered through stages 1-4 without hesitation. On stage 5 it caught an edge case I hadn't seen before and added a guard. After stage 6 I told it to sleep for 30 minutes to see if it would self-resume — it didn't, I had to manually send "continue" before it picked up stage 7.
+
+**That exposed Fable 5's first real truth:**
+
+It has no real "wait" mechanism.
+
+It can run for 9 hours, but if you put it to sleep, **it does not wake up on its own.** You have to push it manually.
+
+Opus 4.8, in contrast, would poll on its own after a sleep and self-resume within 1-2 minutes. Fable 5 does not.
+
+This matters. **Every claim that "Fable 5 runs long tasks unattended" is overstated.** You still have to monitor it; the cadence goes from "every 30 minutes" to "every 3 hours", that's all.
+
+## Speed benchmark: 30% faster than Opus 4.8, 15% slower than Sonnet 4.5
+
+I ran the same code task (an 800-line refactor) through all three models:
+
+| Task | Fable 5 | Opus 4.8 | Sonnet 4.5 |
+|------|---------|----------|------------|
+| 800-line refactor | 4m 12s | 6m 03s | 3m 38s |
+| Cross-file 5-file bug fix | 2m 41s | 3m 55s | 2m 17s |
+| 120K-token long-context summary | 58s | 1m 32s | 1m 14s |
+
+Fable 5 is roughly 30% faster than Opus 4.8 on average. **That I'll concede.**
+
+Against Sonnet 4.5, Fable 5 is actually **15% slower.**
+
+I ran it three times. The gap holds at 12-18%.
+
+This tells me one thing: **Fable 5 is not a Sonnet replacement, it's an Opus replacement.** If you want speed, Sonnet 4.5 is still king. If you want long-horizon capability, Fable 5 is the new ceiling.
+
+## Context overflow: where I almost crashed
+
+**This is the part of Day 2 worth writing about.**
+
+Halfway through stage 6 of the second run, Co-Work mode threw this:
+
+```
+[Context overflow] Session has used 198k of 200k tokens.
+Continuing this task would lose earlier context. 
+Suggested: compact now, or fork session.
+```
+
+On Opus 4.8 I never hit this running 9-hour tasks because Opus 4.8 hits the same 200K ceiling but takes much longer to get there.
+
+**But Fable 5 is fast, and it eats tokens fast.**
+
+I told Co-Work to "compact now."
+
+It did, took 5 minutes, and resumed the task. The first 6 stages of dialogue were compressed into a 4K summary.
+
+**The task did not drop.**
+
+That is its **real killer feature.**
+
+On Opus 4.8, when context fills up, you fork the session and lose the first 6 stages of work. Fable 5's Co-Work has a built-in compact mechanism I didn't know about — it summarises old dialogue and **continues the new task in the same session.**
+
+**That was the moment I realized: Fable 5's "long-horizon ability" is not "it can run longer", it's "it has a compact mechanism that lets it keep going."**
+
+I dug around on Reddit afterwards. This compact mechanism shipped June 1st, but **the official announcement never mentioned it.** It doesn't make headlines. In practice it's a lifesaver.
+
+## Pro user quota: didn't reset on day 2, but...
+
+On Day 1 I said there's a 5-hour quota reset mechanism. I have to **correct that** on Day 2.
+
+I started a second task at 11:00 the next morning. **It didn't ask me to pay anything. It just started running.**
+
+But at 14:00 I checked the dashboard:
+
+```
+Session usage: 4.2 hours of 30h monthly cap.
+```
+
+**It billed my 5-hour quota directly to the monthly cap.**
+
+The 5-hour window isn't "5 hours then forced sleep" — it's "5 hours on the Pro plan, **then bill against the 30h monthly cap**."
+
+Monthly cap: 30 hours. I've used 9.
+
+**Remaining budget through June 22: 21 hours.**
+
+What I said on Day 1 — "Fable 5 runs freely on Pro" — I take that back.
+
+It can run, but **it is not free.** Pro just lowers the bar from $200/month to $20/month. **There's still a monthly ceiling.**
+
+## My new workflow: Fable 5 + Sonnet 4.5 split
+
+I thought at the end of Day 1 that Fable 5 is the "run everything" model. After Day 2 I have a new split:
+
+| Task type | Use |
+|-----------|-----|
+| Short-and-fast (< 1 hour) | Sonnet 4.5 (faster, cheaper) |
+| Long-horizon (> 1 hour, multi-stage) | Fable 5 (compact + endurance) |
+| Heavy reasoning (math, deep code analysis) | Opus 4.8 (removed from menu, API still works) |
+
+Fable 5 does not replace Sonnet 4.5. **It replaces Opus 4.8's position in long-horizon scenarios.**
+
+## Where I land on Fable 5 right now
+
+Two days in, I can't make a final call. But here are the things **I can already confirm:**
+
+**Confirmed:**
+- ✅ Runs 9+ hour long tasks (compact mechanism is the key)
+- ✅ ~30% faster than Opus 4.8
+- ✅ Pro users really can use it, but the 5h cap flows into a 30h monthly ceiling
+- ✅ "Available through June 22" in the email is real, not marketing copy
+- ❌ No auto sleep-wake; manual push required
+- ❌ 15% slower than Sonnet 4.5; not suited to short-and-fast
+
+**Still uncertain:**
+- ❓ Can state be reused across sessions? (If yes, Pro workflows can be redesigned)
+- ❓ Does it degrade in real production loads? (Haven't hit it, but my sample is still small)
+- ❓ What happens after June 22? (Anthropic hasn't said)
+
+## What's next
+
+Day 3 I'll run a **completely different domain** — not code, **research.**
+
+I'll have Fable 5 read 50 arXiv papers, cross-reference them, and produce a synthesis. **See how it holds up on long-horizon work in a non-engineering field.**
+
+If you're also running Fable 5 on long tasks, leave a comment with what you tested — I might be missing a key scenario.
+
+---
+
+*Day 1: [The Fable 5 email sat in my inbox for three days — today I finally opened it](/blog/fable5-day-1-pro-user)*
+
+*Day 3 to follow.*
+
+---
+
+**About this site**: fable-5.org is an independent third-party site. All content is personal field-test reporting. The site has no official affiliation with Anthropic.
