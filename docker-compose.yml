@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Hailuo2.video · Dokploy Docker Compose
+# fable-5.org · Dokploy Docker Compose
 #
 # 用法：
 #   在 Dokploy 面板中选 "Docker Compose" 方式部署，
@@ -9,7 +9,7 @@
 #   app → postgres 通过 service name "postgres" 直连，不走外网。
 #
 # 域名：
-#   在 Dokploy 的 Domains 面板绑定 hailuo2.video，Traefik 自动申请 SSL。
+#   在 Dokploy 的 Domains 面板绑定 fable-5.org，Traefik 自动申请 SSL。
 # ─────────────────────────────────────────────────────────────────────────────
 
 services:
@@ -19,8 +19,8 @@ services:
     restart: unless-stopped
     # 生产不对外暴露 PG，app 走 docker 内网 postgres:5432 直连。
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-hailuo2video}
-      POSTGRES_USER: ${POSTGRES_USER:-hailuo2}
+      POSTGRES_DB: ${POSTGRES_DB:-fable5org}
+      POSTGRES_USER: ${POSTGRES_USER:-fable5}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}   # ← 必填，在 Dokploy env 里设置
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -28,7 +28,7 @@ services:
       # 数据卷已有数据时不会重跑(只首次执行) — 已建表后此 mount 无副作用。
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-hailuo2} -d ${POSTGRES_DB:-hailuo2video}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fable5} -d ${POSTGRES_DB:-fable5org}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -51,38 +51,34 @@ services:
 
       # ── 数据库（内部连接，走 docker 网络）──────────────────────────────────
       DATABASE_PROVIDER: postgresql
-      DATABASE_URL: postgresql://${POSTGRES_USER:-hailuo2}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-hailuo2video}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-fable5}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-fable5org}
       DB_SINGLETON_ENABLED: "true"
       DB_MAX_CONNECTIONS: "1"
 
       # ── 应用 ───────────────────────────────────────────────────────────────
-      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-https://hailuo2.video}
-      NEXT_PUBLIC_APP_NAME: ${NEXT_PUBLIC_APP_NAME:-Hailuo AI Video Generator}
-      NEXT_PUBLIC_APP_DESCRIPTION: ${NEXT_PUBLIC_APP_DESCRIPTION:-Hailuo AI video generator for image-to-video. Animate any image into cinematic short videos powered by Hailuo AI.}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-https://fable-5.org}
+      NEXT_PUBLIC_APP_NAME: ${NEXT_PUBLIC_APP_NAME:-Fable-5.org}
+      NEXT_PUBLIC_APP_DESCRIPTION: ${NEXT_PUBLIC_APP_DESCRIPTION:-Independent third-party reviews of Claude Fable 5 by a Pro user. Not affiliated with Anthropic.}
       NEXT_PUBLIC_APP_LOGO: /logo.png
       NEXT_PUBLIC_THEME: default
-      NEXT_PUBLIC_APPEARANCE: dark
+      NEXT_PUBLIC_APPEANCE: dark
 
       # ── 认证 ───────────────────────────────────────────────────────────────
       AUTH_SECRET: ${AUTH_SECRET}               # ← 必填：openssl rand -base64 32
-      AUTH_URL: ${NEXT_PUBLIC_APP_URL:-https://hailuo2.video}
+      AUTH_URL: ${NEXT_PUBLIC_APP_URL:-https://fable-5.org}
 
-      # ── AI providers（必填，否则 video 生成跑不起来）────────────────────
-      # OpenRouter 是当前默认的 LLM provider
+      # ── AI providers（评测站不需要，留空即可）──────────────────────────────
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
-      # Replicate（如果用 replicate 跑 hailuo 模型）
       REPLICATE_API_TOKEN: ${REPLICATE_API_TOKEN:-}
 
       # ── 邮件（可选）───────────────────────────────────────────────────────
       RESEND_API_KEY: ${RESEND_API_KEY:-}
-      RESEND_SENDER_EMAIL: ${RESEND_SENDER_EMAIL:-noreply@hailuo2.video}
+      RESEND_SENDER_EMAIL: ${RESEND_SENDER_EMAIL:-noreply@fable-5.org}
 
-      # ── Stripe（可选）─────────────────────────────────────────────────────
+      # ── Stripe / PayPal（评测站不需要）────────────────────────────────────
       STRIPE_PUBLIC_KEY: ${STRIPE_PUBLIC_KEY:-}
       STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
       STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
-
-      # ── PayPal（可选）─────────────────────────────────────────────────────
       NEXT_PUBLIC_PAYPAL_CLIENT_ID: ${NEXT_PUBLIC_PAYPAL_CLIENT_ID:-}
       PAYPAL_CLIENT_SECRET: ${PAYPAL_CLIENT_SECRET:-}
     networks:
@@ -90,21 +86,21 @@ services:
       - dokploy-network   # Traefik 通过这个网络路由流量
     labels:
       # Traefik 路由（参数化：prod 与 pre 共用同一文件，靠环境变量区分）
-      #   prod（默认值）：router=hailuo2video, 域名 hailuo2.video/www
-      #   pre（在 Dokploy env 覆盖）：TRAEFIK_ROUTER=hailuo2video-pre,
-      #        APP_RULE=Host(`pre.hailuo2.video`), ROUTER_MIDDLEWARES=hailuo2video-noindex
+      #   prod（默认值）：router=fable5org, 域名 fable-5.org/www
+      #   pre（在 Dokploy env 覆盖）：TRAEFIK_ROUTER=fable5org-pre,
+      #        APP_RULE=Host(`pre.fable-5.org`), ROUTER_MIDDLEWARES=fable5org-noindex
       - "traefik.enable=true"
-      - "traefik.http.routers.${TRAEFIK_ROUTER:-hailuo2video}.rule=${APP_RULE:-Host(`hailuo2.video`) || Host(`www.hailuo2.video`)}"
-      - "traefik.http.routers.${TRAEFIK_ROUTER:-hailuo2video}.entrypoints=websecure"
-      - "traefik.http.routers.${TRAEFIK_ROUTER:-hailuo2video}.tls.certresolver=letsencrypt"
-      - "traefik.http.services.${TRAEFIK_ROUTER:-hailuo2video}.loadbalancer.server.port=3000"
-      - "traefik.http.routers.${TRAEFIK_ROUTER:-hailuo2video}.middlewares=${ROUTER_MIDDLEWARES:-hailuo2video-www}"
+      - "traefik.http.routers.${TRAEFIK_ROUTER:-fable5org}.rule=${APP_RULE:-Host(`fable-5.org`) || Host(`www.fable-5.org`)}"
+      - "traefik.http.routers.${TRAEFIK_ROUTER:-fable5org}.entrypoints=websecure"
+      - "traefik.http.routers.${TRAEFIK_ROUTER:-fable5org}.tls.certresolver=letsencrypt"
+      - "traefik.http.services.${TRAEFIK_ROUTER:-fable5org}.loadbalancer.server.port=3000"
+      - "traefik.http.routers.${TRAEFIK_ROUTER:-fable5org}.middlewares=${ROUTER_MIDDLEWARES:-fable5org-www}"
       # www → apex 重定向（prod 默认启用）
-      - "traefik.http.middlewares.hailuo2video-www.redirectregex.regex=^https://www\\.hailuo2\\.video/(.*)"
-      - "traefik.http.middlewares.hailuo2video-www.redirectregex.replacement=https://hailuo2.video/$${1}"
-      - "traefik.http.middlewares.hailuo2video-www.redirectregex.permanent=true"
+      - "traefik.http.middlewares.fable5org-www.redirectregex.regex=^https://www\\.fable-5\\.org/(.*)"
+      - "traefik.http.middlewares.fable5org-www.redirectregex.replacement=https://fable-5.org/$${1}"
+      - "traefik.http.middlewares.fable5org-www.redirectregex.permanent=true"
       # noindex（pre 预览环境用，防止搜索引擎收录测试站）
-      - "traefik.http.middlewares.hailuo2video-noindex.headers.customresponseheaders.X-Robots-Tag=noindex, nofollow"
+      - "traefik.http.middlewares.fable5org-noindex.headers.customresponseheaders.X-Robots-Tag=noindex, nofollow"
 
 volumes:
   postgres_data:
