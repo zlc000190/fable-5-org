@@ -77,3 +77,4 @@ This codebase is for an independent third-party project. "Hailuo" and
 "海螺" are trademarks of their respective owners; references to them are
 for descriptive purposes only (nominative fair use) to identify the model
 being wrapped.
+<!-- last build trigger: 2026-06-14T10:18:17Z -->
