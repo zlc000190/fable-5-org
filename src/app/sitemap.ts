@@ -13,10 +13,27 @@ import {
 const LOCALES = ['en', 'zh'] as const;
 const DEFAULT_LOCALE = envConfigs.locale || 'en';
 
-type Page = { slug: string[]; locale?: string };
+type Page = {
+  slug?: string[];
+  path?: string;
+  url?: string;
+  locale?: string;
+};
 
 // Get the canonical path under the default locale (no /en/ prefix).
 function defaultPath(p: Page): string {
+  if (p.url) {
+    return p.url.startsWith('/') ? p.url : `/${p.url}`;
+  }
+
+  if (p.path) {
+    return p.path.startsWith('/') ? p.path : `/${p.path}`;
+  }
+
+  if (!p.slug) {
+    return '/';
+  }
+
   if (p.locale && p.locale !== DEFAULT_LOCALE) {
     // Source loader tagged this page as a non-default locale — derive its
     // default-locale counterpart by stripping the /<locale>/ prefix from
@@ -39,9 +56,9 @@ function localizedUrl(p: Page, locale: string): string {
 }
 
 // Flatten a source's pages + their per-locale pages into a flat list.
-function flat(source: { getPages(): Page[] }): Page[] {
+function flat(source: { getPages: (...args: any[]) => any[] }): Page[] {
   const out: Page[] = [];
-  for (const p of source.getPages()) {
+  for (const p of source.getPages() as Page[]) {
     out.push(p);
   }
   return out;
